@@ -74,9 +74,9 @@ public class Level0Generator extends ChunkGenerator {
 					}
 				} else {
 					chunk.setBlock(x, this.level_y+1, z, LOBBY_CARPET);
-					final int modX6 = Math.abs(xx) % 7;
-					final int modZ6 = Math.abs(zz) % 7;
-					if (modZ6 == 0 && modX6 < 2) {
+					final int  modX7 = (xx < 0 ? 1-xx : xx) % 7;
+					final int  modZ7 = (zz < 0 ? 0-zz : zz) % 7;
+					if (modZ7 == 0 && modX7 < 2) {
 						// ceiling lights
 						chunk.setBlock(x, cy, z, Material.REDSTONE_LAMP);
 						final BlockData block = chunk.getBlockData(x, cy, z);
