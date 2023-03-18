@@ -8,7 +8,7 @@ To use this world generator, just edit your multiverse worlds.yml file and set g
 After setting the generator for the world, you may need to delete the files in backrooms/region/ if any vanilla chunks have already been generated.
 
 
-Requires pxnCommonMC plugin:
+Requires Multiverse and pxnCommonMC plugin:
 https://dev.bukkit.org/projects/pxncommonpluginmc
 or https://www.spigotmc.org/resources/pxncommonpluginmc.107049/
 
