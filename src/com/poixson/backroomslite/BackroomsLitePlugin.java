@@ -15,7 +15,7 @@ public class BackroomsLitePlugin extends xJavaPlugin {
 
 	protected static final String GENERATOR_NAME = "BackroomsLite";
 //TODO: change to https
-	protected static final String DEFAULT_RESOURCE_PACK = "http://dl.poixson.com/mcplugins/pxnBackrooms/pxnBackrooms-resourcepack.zip";
+	protected static final String DEFAULT_RESOURCE_PACK = "https://dl.poixson.com/mcplugins/pxnBackrooms/pxnBackrooms-resourcepack.zip";
 
 	protected final Level0Generator generator;
 
