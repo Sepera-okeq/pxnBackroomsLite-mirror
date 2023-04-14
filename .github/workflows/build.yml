@@ -25,7 +25,7 @@ jobs:
           distribution: adopt
           java-version: 17
       - name: Install xBuild
-        run: sudo dnf install python3 && sudo dnf install https://yum.poixson.com/latest.rpm && sudo dnf install pxn-testing-release && sudo dnf install xbuild
+        run: dnf install python3 && dnf install https://yum.poixson.com/latest.rpm && dnf install pxn-testing-release && dnf install xbuild
       - name: Clone dependencies
         run: xbuild --pp
       - name: Compile All project
