@@ -17,16 +17,6 @@ jobs:
     runs-on: ubuntu-latest
     container: rockylinux:9
     steps:
-      - name: Setup Environment (PR)  
-        if: ${{ github.event_name == 'pull_request' }}  
-        shell: bash  
-        run: |  
-          echo "LAST_COMMIT_SHA=${{ github.event.pull_request.head.sha }}" >> ${GITHUB_ENV}  
-      - name: Setup Environment (Push)  
-        if: ${{ github.event_name == 'push' }}  
-        shell: bash  
-        run: |  
-          echo "LAST_COMMIT_SHA=${GITHUB_SHA}" >> ${GITHUB_ENV}
       - name: Checkout
         uses: actions/checkout@v3.0.0
       - name: Set up JDK
@@ -43,7 +33,7 @@ jobs:
       - name: Clone dependencies project
         run: xbuild --pp
       - name: Compile project
-        run: xbuild --auto ${GITHUB_ENV}
+        run: xbuild --auto ${GITHUB_SHA}
       - name: Upload BackroomsLite
         uses: actions/upload-artifact@v3.0.0
         with:
