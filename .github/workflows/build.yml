@@ -31,7 +31,7 @@ jobs:
       - name: Install xBuild
         run: yum update -y && dnf install python3 && dnf install https://yum.poixson.com/latest.rpm -y && dnf install pxn-testing-release -y && dnf install xbuild -y
       - name: Clone dependencies project
-        run: xbuild --pp
+        run: ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts && xbuild --pp
       - name: Compile project
         run: xbuild --dev
       - name: Upload BackroomsLite
