@@ -33,7 +33,7 @@ jobs:
       - name: Clone dependencies project
         run: xbuild --pp
       - name: Compile project
-        run: xbuild --dev
+        run: xbuild --auto
       - name: Upload BackroomsLite
         uses: actions/upload-artifact@v3.0.0
         with:
